@@ -8,6 +8,8 @@ import com.amazonaws.services.rekognition.AmazonRekognition;
 import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
 import com.epam.hackathon.image.util.FileUtil;
 
+//please use Spring to manage services.
+@Deprecated
 public class ClientFactory {
 	
 	/***

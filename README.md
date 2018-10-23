@@ -34,6 +34,7 @@ Backend services:
 3. `cd` into dir `services`.
 4. (Optional)run `gradle`(if you've done step 1) or `gradlew`. Now gradle is fetch dependencies from Ali's maven central mirror.
 5. import `services` as root project into your favorite IDE. There should be 4 subprojects. See this [link](/services) for detailed info.
+    * If your IDE does not support Gradle, you can run `gradle idea` or `gradle eclipse` to generate IDE congnitive files, then import.
 
 Front services:
 1. todo

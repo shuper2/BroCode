@@ -9,6 +9,6 @@
 
 * Convert/Map aws `CompareFacesMatch` to domain object.
 
-## Process illustration:
+## Process flow:
 
 todo

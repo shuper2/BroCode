@@ -24,6 +24,7 @@ allprojects {
 subprojects {
     apply plugin: 'java'
     apply plugin: 'idea'
+    apply plugin: 'eclipse'
     apply plugin: 'io.spring.dependency-management'
 
     group = 'com.epam.hackthon'

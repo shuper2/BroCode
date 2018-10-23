@@ -24,3 +24,4 @@ Madatory:
 Optional:
 
 * Task management. Should a Kanban service be found, we don't need to commit on this file.
+* Documentation. Please fill the doc linked on the main readme, if you know how. This could surely make our project more understandable.

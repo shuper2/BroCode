@@ -1,0 +1,10 @@
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.8
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+    compile project(':core')
+	testCompile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
+}
+

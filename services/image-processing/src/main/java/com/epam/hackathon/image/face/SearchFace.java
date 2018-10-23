@@ -1,7 +1,7 @@
-package bro.code.face;
+package com.epam.hackathon.image.face;
 
-import bro.code.util.FileUtil;
 import com.amazonaws.services.rekognition.model.CompareFacesMatch;
+import com.epam.hackathon.image.util.FileUtil;
 
 import java.util.HashMap;
 import java.util.List;

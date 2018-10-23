@@ -4,10 +4,9 @@ apply plugin: 'org.springframework.boot'
 sourceCompatibility = 1.8
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-webflux')
+    compile('org.springframework.boot:spring-boot-starter-web')
     compile project(':data')
     compile project(':core')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile('io.projectreactor:reactor-test')
 }
 

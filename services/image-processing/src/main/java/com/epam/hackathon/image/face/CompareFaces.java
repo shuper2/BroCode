@@ -1,11 +1,11 @@
-package bro.code.face;
+package com.epam.hackathon.image.face;
 
-import bro.code.client.ClientFactory;
-import bro.code.util.FileUtil;
 import com.amazonaws.services.rekognition.model.CompareFacesMatch;
 import com.amazonaws.services.rekognition.model.CompareFacesRequest;
 import com.amazonaws.services.rekognition.model.CompareFacesResult;
 import com.amazonaws.services.rekognition.model.Image;
+import com.epam.hackathon.image.util.FileUtil;
+import com.epam.hackathon.image.client.ClientFactory;
 
 import java.nio.ByteBuffer;
 import java.util.List;

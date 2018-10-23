@@ -1,4 +1,4 @@
-package bro.code.util;
+package com.epam.hackathon.image.util;
 
 import javax.imageio.ImageIO;
 import java.io.File;

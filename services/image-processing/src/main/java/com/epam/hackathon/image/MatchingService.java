@@ -1,4 +1,4 @@
-package com.epam.hackathon.image.matching;
+package com.epam.hackathon.image;
 
 import com.epam.hachathon.domain.FindingCase;
 import com.epam.hachathon.domain.LostCase;

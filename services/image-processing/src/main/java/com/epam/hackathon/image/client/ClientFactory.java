@@ -1,12 +1,12 @@
-package bro.code.client;
+package com.epam.hackathon.image.client;
 
-import bro.code.util.FileUtil;
 import com.amazonaws.ClientConfiguration;
 import com.amazonaws.Protocol;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.rekognition.AmazonRekognition;
 import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
+import com.epam.hackathon.image.util.FileUtil;
 
 public class ClientFactory {
 	

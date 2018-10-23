@@ -10,6 +10,7 @@ Repository for BroCode hackathon team's Code4Good projects.
 /services   --- backend services
 /ui         --- frontend
 /deploy     --- scripts, config etc for running
+/demo       --- materials for demostration
 ```
 
 ## Dev guide:

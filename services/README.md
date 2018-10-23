@@ -1,11 +1,13 @@
 ## Backend services
 
+For system architecture, see [Link](../doc/ARCHITECTURE.md)
+
 ### Terms & Domain object
 * LostCase
 * FindingCase
 * Match
 
-### 4 basic component:
+### Components:
 1. web - ui endpoints
 2. data - repositories and data arrangement
 3. core - domain object and basic utilities
@@ -15,10 +17,6 @@ Component build dependency:
 
 todo
 
-### 2 runable services
+### Runable services
 1. web service
 2. image-processing service
-
-System architecture:
-
-todo

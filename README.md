@@ -13,6 +13,16 @@ Repository for BroCode hackathon team's Code4Good projects.
 /demo       --- materials for demostration
 ```
 
+## Document:
+
+* [Project Description](./doc)
+* [System Architecture](./doc/ARCHITECTURE.md)
+* [User Interface](./ui)
+* [Backend Services](./services)
+    * [Image processing](./services/image-processing)
+* [Internal API specs](./doc/API.md)
+* etc.. todo
+
 ## Dev guide:
 
 Backend services:

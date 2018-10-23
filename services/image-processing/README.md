@@ -1,4 +1,4 @@
-# Image module
+# Image processing module
 
 ## New BroCode repo gradle migration
 

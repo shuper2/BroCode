@@ -1,6 +1,6 @@
-# Service API doc
+# Api specs
 
-## UI -> Web
+## UI -> Web service API
 
 #### Publish lost:
 

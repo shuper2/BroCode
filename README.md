@@ -2,6 +2,8 @@
 
 Repository for BroCode hackathon team's Code4Good projects.
 
+__Want to find works to do? Look at [here](./backlog).__
+
 ## Directory structure:
 
 ```text

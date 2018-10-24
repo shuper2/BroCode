@@ -17,8 +17,7 @@ __Want to find works to do? Look at [here](./backlog).__
 
 ## Document:
 
-* [Project Description](./doc)
-* [System Architecture](./doc/ARCHITECTURE.md)
+* [Project & Architecture](./doc)
 * [User Interface](./ui)
 * [Backend Services](./services)
     * [Image processing](./services/image-processing)

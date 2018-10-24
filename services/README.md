@@ -1,6 +1,6 @@
 ## Backend services
 
-For system architecture, see [Link](../doc/ARCHITECTURE.md)
+For system architecture, see [Link](../doc)
 
 ### Terms & Domain object
 * LostCase

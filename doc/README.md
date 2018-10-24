@@ -8,4 +8,8 @@ todo
 
 some description: todo
 
+## System Architecture
+
+![Archi](./assets/BroCode-architecture.png)
+
 ## Team Description:

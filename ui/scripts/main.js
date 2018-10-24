@@ -65,7 +65,9 @@ $(".carousel-control-next").on("click", (e) => {
 });
 
 $("#closeThanksModal").on("click", (e) => {
-    window.location.href = "home.html";
+    setTimeout(() => {
+        window.location.href = "home.html";
+    }, 500);
 });
 
 $(() => {
@@ -74,5 +76,6 @@ $(() => {
     let age = 5;
     let gender = "male";
     let findingInfo = { id, name, age, gender };
+
     loadMatches(findingInfo);
 });

@@ -15,7 +15,7 @@ For system architecture, see [Link](../doc/ARCHITECTURE.md)
 
 Component build dependency:
 
-todo
+![dependencies](../doc/assets/BroCode-gradle-dependency.png)
 
 ### Runable services
 1. web service

@@ -50,6 +50,10 @@ $(".carousel-control-prev").on("click", (e) => {
     updateMissingInfo(matches[activeIndex]);
 });
 
+$("#confirmMatched").on("click", (e) => {
+    console.log("Matched:", JSON.stringify(matches[activeIndex]));
+})
+
 $(".carousel-control-next").on("click", (e) => {
     if (!matches || !matches.length) return;
     if (activeIndex === matches.length - 1) {
@@ -58,6 +62,10 @@ $(".carousel-control-next").on("click", (e) => {
         activeIndex++;
     }
     updateMissingInfo(matches[activeIndex]);
+});
+
+$("#closeThanksModal").on("click", (e) => {
+    window.location.href = "home.html";
 });
 
 $(() => {

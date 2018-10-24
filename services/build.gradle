@@ -1,0 +1,32 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.5.RELEASE'
+    }
+    repositories {
+        maven {
+            url = "http://maven.aliyun.com/nexus/content/groups/public"
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+
+allprojects {
+    repositories {
+        maven {
+            url = "http://maven.aliyun.com/nexus/content/groups/public"
+        }
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+    apply plugin: 'io.spring.dependency-management'
+
+    group = 'com.epam.hackthon'
+    version = '0.0.1-SNAPSHOT'
+}

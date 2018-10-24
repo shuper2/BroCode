@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <title>Document</title>
+    <title>Matching</title>
 </head>
 <body>
     <ul class="nav justify-content-left">
@@ -56,17 +56,13 @@
         </div>
         <div class="row match-info">
             <div class="col col-12 col-sm-12">
-                <div class="row">
-                    <div class="text-right col col-4 col-sm-4 field-name">Name:</div>
-                    <div class="col col-8 col-sm-8 field-value">ABC</div>
-                </div>
-                <div class="row">
-                    <div class="text-right col col-4 col-sm-4 field-name">Age:</div>
-                    <div class="col col-8 col-sm-8 field-value">5</div>
-                </div>
-                <div class="row">
-                    <div class="text-right col col-4 col-sm-4 field-name">Gender:</div>
-                    <div class="col col-8 col-sm-8 field-value">male</div>
+                <div class="row"><!-- text-right col col-4 col-sm-4 -->
+                    <div class="col col-12 col-sm-12">
+                        <span class="field-name">Similarity: </span><span class="field-value"><span class="similarity">86</span>%</span><span class="delimiter">, </span>
+                        <span class="field-name">name: </span><span class="name field-value">Abc</span><span class="delimiter">, </span>
+                        <span class="field-name">age: </span><span class="age field-value">5</span><span class="delimiter">, </span>
+                        <span class="field-name">gender: </span><span class="gender field-value">male</span><span class="delimiter">.</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,7 +73,7 @@
         </div>
     </div>
 
-    <script src="scripts/jquery/jquery.slim.min.js"></script>
+    <script src="scripts/jquery/jquery.min.js"></script>
     <script src="scripts/popper.js/umd/popper.min.js"></script>
     <script src="scripts/bootstrap/bootstrap.min.js"></script>
     <script src="scripts/main.js"></script>

@@ -17,7 +17,7 @@ public class FileUtil {
 	private static Logger logger=Logger.getLogger(FileUtil.class.getName());
 	
 	private static char fileSeparator=File.separatorChar;
-	private static ResourceBundle resourceBundle=ResourceBundle.getBundle("data");
+	//private static ResourceBundle resourceBundle=ResourceBundle.getBundle("data");
 	
 	/***
 	 * Loads an input image and converts it to ByteBuffer object
@@ -77,18 +77,18 @@ public class FileUtil {
 		return file.getName().endsWith(".jpg");
 	}
 
-	/***
-	 * This method fetches the value of the given key from the resource bundle defined in this class. 
-	 * @param key input key
-	 * @return value of the given key.
-	 */
-	public static String getValueFromResourceBundle(String key) {
-		if(key==null) {
-			return "";
-		}
-		String value=resourceBundle.getString(key);
-		return value;
-	}
+//	/***
+//	 * This method fetches the value of the given key from the resource bundle defined in this class.
+//	 * @param key input key
+//	 * @return value of the given key.
+//	 */
+//	public static String getValueFromResourceBundle(String key) {
+//		if(key==null) {
+//			return "";
+//		}
+//		String value=resourceBundle.getString(key);
+//		return value;
+//	}
 	
 	public static char getFileSeparator() {
 		return fileSeparator;

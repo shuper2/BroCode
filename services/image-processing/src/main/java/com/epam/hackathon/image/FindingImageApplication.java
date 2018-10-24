@@ -6,32 +6,42 @@ import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.rekognition.AmazonRekognition;
 import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
+import com.epam.hachathon.domain.FindingCase;
+import com.epam.hachathon.domain.LostCase;
 import com.epam.hackathon.data.CaseRepository;
 import com.epam.hackathon.data.MatchRepository;
 import com.epam.hackathon.image.util.FileUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@EnableScheduling
+//@EnableScheduling
 public class FindingImageApplication {
 
+    @Lazy
     @Bean
     CaseRepository findingCaseRepository() {
-        throw new AssertionError("Not implemented");
+        return CaseRepository.newInstance();
     }
 
+    @Lazy
     @Bean
     MatchRepository matchRepository() {
-        throw new AssertionError("Not implemented");
+        return MatchRepository.newInstance();
     }
 
     @Bean
     ImageMatchingApi imageMatchingApi() {
-        throw new AssertionError("Not implemented");
+        return (lostCase, findingCase) -> {
+            //TODO: not implemented
+            throw new AssertionError("Not implemented");
+        };
     }
 
     @Bean

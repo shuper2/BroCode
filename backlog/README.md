@@ -4,7 +4,7 @@
 
 Mandatory:
 
-* Image processing, to implement interface `ImageMatchingApi` under module `image-processing`. Migrate aws face comparison classes to Spring services.
+* Image processing, to implement interface `ImageMatchingApi` under module `image-processing`.
 * Image file uploading. Since we may use local file system as storage, file loading mechanism must be development between UI and Web service.
 * Implementation of `CaseRepository`. Choose whatever underlying db.
 * Implementation of `CaseRepository`. Choose whatever underlying db.

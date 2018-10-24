@@ -7,6 +7,7 @@ import com.epam.hackathon.data.CaseRepository;
 import com.epam.hackathon.data.MatchRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,7 @@ class MatchingService {
     private final MatchRepository matchRepository;
     private final long sleepDuration;
 
+    @Autowired
     MatchingService(final ImageMatchingApi api,
                     final CaseRepository caseRepository,
                     final MatchRepository matchRepository,
@@ -30,7 +32,7 @@ class MatchingService {
         this.sleepDuration = sleepDuration;
     }
 
-    @Scheduled(fixedDelayString = "${image.processing.fetching.interval}")
+    @Scheduled(fixedDelay = 3000)
     public void matchCase() {
         final Match newMatch = matchRepository.fetchCasePairAsNewMatch();
         if (newMatch == null) {

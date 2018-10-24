@@ -1,21 +1,29 @@
 package com.epam.hackathon.image.face;
 
+import com.epam.hackathon.image.FindingImageApplication;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Map;
 
-import static org.assertj.core.api.Assertions.*;
-
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = FindingImageApplication.class)
 public class SearchFaceTest {
+
+    @Autowired
+    private SearchFace searchFace;
 
     @Test
     public void compareImages(){
         String folderLocationToSearch="C:\\Users\\Hp\\Pictures\\test\\2";
         String sourceImage="C:\\Users\\Hp\\Pictures\\test\\devendra.jpg";
-        float similarityThreshold=55f;
 
-        SearchFace searchFace=new SearchFace(folderLocationToSearch, sourceImage, similarityThreshold);
-        Map<String, Float> matchedImages=searchFace.run();
+        searchFace.setSimilarityThreshold(55f);
+        Map<String, Float> matchedImages=searchFace.run(folderLocationToSearch, sourceImage);
 
 
         System.out.println("DONE");

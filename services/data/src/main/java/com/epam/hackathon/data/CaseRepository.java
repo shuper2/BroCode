@@ -7,6 +7,10 @@ import java.util.List;
 
 public interface CaseRepository {
 
+    static CaseRepository newInstance(){
+        return new CaseRepositoryImpl();
+    }
+
     FindingCase getFindingCaseById(final long findingId);
 
     long saveFindingCase(final FindingCase findingCase);

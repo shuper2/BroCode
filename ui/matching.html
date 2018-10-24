@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <title>Document</title>
+    <title>Matching</title>
 </head>
 <body>
     <ul class="nav justify-content-left">
@@ -18,6 +18,7 @@
     </ul>
     <div class="brocode-main-container container">
         <h5>Your finding</h5>
+        <!-- found people image -->
         <div class="brocode-finding row">
             <div class="col col-12 col-sm-12">
                 <img src="img/boy-01.jpg" alt="" />
@@ -25,7 +26,7 @@
         </div>
         <h5>Matches</h5>
         <div class="row">
-            <div class="col col-sm-12">
+            <div class="col col-sm-12"><!-- Matched missing people images -->
                 <div id="matches" class="carousel slide" data-ride="carousel" data-interval="false">
                     <ol class="carousel-indicators">
                         <li data-target="#matches01" data-slide-to="0" class="active"></li>
@@ -54,30 +55,46 @@
                 </div>
             </div>
         </div>
-        <div class="row match-info">
+
+        <div class="row match-info"><!-- matched people information -->
             <div class="col col-12 col-sm-12">
                 <div class="row">
-                    <div class="text-right col col-4 col-sm-4 field-name">Name:</div>
-                    <div class="col col-8 col-sm-8 field-value">ABC</div>
-                </div>
-                <div class="row">
-                    <div class="text-right col col-4 col-sm-4 field-name">Age:</div>
-                    <div class="col col-8 col-sm-8 field-value">5</div>
-                </div>
-                <div class="row">
-                    <div class="text-right col col-4 col-sm-4 field-name">Gender:</div>
-                    <div class="col col-8 col-sm-8 field-value">male</div>
+                    <div class="col col-12 col-sm-12">
+                        <span class="field-name">Similarity: </span><span class="field-value"><span class="similarity">86</span>%</span><span class="delimiter">, </span>
+                        <span class="field-name">name: </span><span class="name field-value">Abc</span><span class="delimiter">, </span>
+                        <span class="field-name">age: </span><span class="age field-value">5</span><span class="delimiter">, </span>
+                        <span class="field-name">gender: </span><span class="gender field-value">male</span><span class="delimiter">.</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row operations">
+        <div class="row operations"> <!-- Confirm button -->
             <div class="col col-12 col-sm-12 align-items-center">
-                <button type="button" class="btn btn-success">Confirm</button>
+                <button id="confirmMatched" type="button" class="btn btn-primary" data-toggle="modal" data-target="#thanksModal">Confirm</button>
             </div>
         </div>
+
+        <!-- Thanks Modal -->
+        <div class="modal fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="thanksModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="thanksModalTitle">Thank You</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    Thanks for helping us to find out this missing kid.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="closeThanksModal" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
     </div>
 
-    <script src="scripts/jquery/jquery.slim.min.js"></script>
+    <script src="scripts/jquery/jquery.min.js"></script>
     <script src="scripts/popper.js/umd/popper.min.js"></script>
     <script src="scripts/bootstrap/bootstrap.min.js"></script>
     <script src="scripts/main.js"></script>

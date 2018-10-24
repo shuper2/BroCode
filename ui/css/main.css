@@ -1,5 +1,10 @@
 body {
+    background-color: #455357;
+}
+
+.brocode-main-container {
     background-color: #CFD8DC;
+    padding-bottom: 10px;
 }
 
 .brocode-finding img {
@@ -18,6 +23,20 @@ body {
 
 .carousel-inner {
     height: 280px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.match-info .field-name {
+
+}
+
+.match-info .field-value {
+    font-weight: 600;
 }
 
 .operations {

@@ -2,6 +2,20 @@ body {
     background-color: #455357;
 }
 
+.big-title {
+    height: 400px;
+    color: #fff;
+}
+
+.operations .btn {
+    min-width: 80px;
+}
+
+.operations > div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .brocode-main-container {
     background-color: #CFD8DC;
     padding-bottom: 10px;
@@ -39,7 +53,6 @@ body {
     font-weight: 600;
 }
 
-.operations {
+.matching .operations {
     text-align: center;
-    margin-top: 8px;
 }

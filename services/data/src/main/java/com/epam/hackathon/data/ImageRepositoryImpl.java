@@ -25,4 +25,9 @@ public class ImageRepositoryImpl implements ImageRepository {
     public void insert(List<LostImage> lostImages) {
         dataSource.getDataSource().save(lostImages);
     }
+
+    @Override
+    public LostImage getLostImageById(int lostImageId){
+        return dataSource.getDataSource().find(LostImage.class).field("lostImageId").equal(lostImageId).get();
+    }
 }

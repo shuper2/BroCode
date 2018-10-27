@@ -7,5 +7,6 @@ import java.util.List;
 public interface ImageRepository {
 
     List<LostImage> findAllLostImages();
+    LostImage getLostImageById(int lostImageId);
     void insert(List<LostImage> lostImages);
 }

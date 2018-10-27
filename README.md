@@ -34,9 +34,12 @@ Backend services:
 4. (Optional)run `gradle`(if you've done step 1) or `gradlew`. Now gradle is fetch dependencies from Ali's maven central mirror.
 5. import `services` as root project into your favorite IDE. There should be 4 subprojects. See this [link](/services) for detailed info.
     * If your IDE does not support Gradle, you can run `gradle idea` or `gradle eclipse` to generate IDE congnitive files, then import.
+6. web service will be started by either:
+    * run main class `FindingWebApplication` in IDE
+    * run cmd: `gradlew web:bootRun`
 
-Front services:
-1. todo
+Frontend:
+1. once web service is started, home page can be accessed at `localhost:8080`, any file changes under `ui` dir, will be reflected by refresh the browser(cache-disabled), no need to restart the web service.
 
 ## Build & Deploy guide:
 

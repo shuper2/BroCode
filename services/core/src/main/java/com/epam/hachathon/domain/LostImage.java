@@ -1,10 +1,17 @@
 package com.epam.hachathon.domain;
 
+import org.bson.types.ObjectId;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
+
 import java.util.Collections;
 import java.util.List;
 
+@Entity
 public class LostImage {
 
+    @Id
+    public ObjectId id;
     private Integer lostImageId;
     private String lostImagePath;
     private List<FoundImage> foundImages = Collections.emptyList();
@@ -31,5 +38,13 @@ public class LostImage {
 
     public void setFoundImages(List<FoundImage> foundImages) {
         this.foundImages = foundImages;
+    }
+
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
     }
 }

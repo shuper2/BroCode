@@ -1,7 +1,14 @@
 package com.epam.hachathon.domain;
 
+import org.bson.types.ObjectId;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
+
+@Entity
 public class FoundImage {
 
+    @Id
+    public ObjectId id;
     private Integer foundImageId;
     private String foundImagePath;
     private Double matchPercentage;
@@ -28,5 +35,13 @@ public class FoundImage {
 
     public void setMatchPercentage(Double matchPercentage) {
         this.matchPercentage = matchPercentage;
+    }
+
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
     }
 }

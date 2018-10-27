@@ -10,19 +10,19 @@ import java.util.List;
 @Repository
 public class ImageRepositoryImpl implements ImageRepository {
 
-    private MongoDBConfig mongoDBConfig;
+    private MongoDBConfig dataSource;
 
     @Autowired
-    public ImageRepositoryImpl(MongoDBConfig mongoDBConfig) {
-        this.mongoDBConfig = mongoDBConfig;
+    public ImageRepositoryImpl(MongoDBConfig dataSource) {
+        this.dataSource = dataSource;
     }
 
+    @Override
     public List<LostImage> findAllLostImages() {
-
-        return mongoDBConfig.getDataSource().find(LostImage.class).asList();
+        return dataSource.getDataSource().find(LostImage.class).asList();
     }
-
+    @Override
     public void insert(List<LostImage> lostImages) {
-        mongoDBConfig.getDataSource().save(lostImages);
+        dataSource.getDataSource().save(lostImages);
     }
 }

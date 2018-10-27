@@ -3,6 +3,7 @@ apply plugin: 'org.springframework.boot'
 sourceCompatibility = 1.8
 
 dependencies {
+    compile 'org.springframework.boot:spring-boot-starter'
     compile 'com.amazonaws:aws-java-sdk-rekognition:1.11.431'
     compile project(':data')
     compile project(':core')

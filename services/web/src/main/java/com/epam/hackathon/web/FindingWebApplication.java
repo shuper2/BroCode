@@ -18,7 +18,7 @@ public class FindingWebApplication implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
-                .addResourceLocations("file:../ui/");
+                .addResourceLocations("classpath:/");
     }
     public static void main(String[] args) {
         SpringApplication.run(FindingWebApplication.class, args);

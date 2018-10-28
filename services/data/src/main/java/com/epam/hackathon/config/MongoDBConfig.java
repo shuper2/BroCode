@@ -19,7 +19,7 @@ public class MongoDBConfig {
     private String mongoDatabase;
 
     @Bean(name = "dataSource")
-    public Datastore getDataSource() {
+    public Datastore datastore() {
         MongoClientURI uri = new MongoClientURI(mongoDbUri);
 
         MongoClient mongoClient = new MongoClient(uri);

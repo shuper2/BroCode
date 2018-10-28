@@ -11,8 +11,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-@SpringBootApplication
-//@EnableScheduling
+@SpringBootApplication(scanBasePackages = "com.epam.hackathon")
 public class FindingImageApplication {
 
 

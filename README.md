@@ -2,8 +2,6 @@
 
 Repository for BroCode hackathon team's Code4Good projects.
 
-__Want to find works to do? Look at [here](./backlog).__
-
 ## Directory structure:
 
 ```text
@@ -24,26 +22,22 @@ __Want to find works to do? Look at [here](./backlog).__
 * [Internal API specs](./doc/API.md)
 * etc.. todo
 
-## Dev guide:
+## Dev & Build guide:
 
 Backend services:
 
-1. (Optional)install gradle 4.8+: [Link](https://gradle.org/install/)
+1. install maven 3.2+: [Link](https://maven.apache.org/)
 2. `git clone` this repository to your local env.
 3. `cd` into dir `services`.
-4. (Optional)run `gradle`(if you've done step 1) or `gradlew`. Now gradle is fetch dependencies from Ali's maven central mirror.
-5. import `services` as root project into your favorite IDE. There should be 4 subprojects. See this [link](/services) for detailed info.
-    * If your IDE does not support Gradle, you can run `gradle idea` or `gradle eclipse` to generate IDE congnitive files, then import.
+4. (Optional)run `mvn compile` to fetch dependencies from Ali's maven central mirror.
+5. import `services` as root dir into your favorite IDE as a maven project.
 6. web service will be started by either:
     * run main class `FindingWebApplication` in IDE
-    * run cmd: `gradlew web:bootRun`
+    * run cmd: `mvn install` under `services` dir to package module jars, then run cmd `mvn spring-boot:run` under `web` dir.
 
 Frontend:
 1. once web service is started, home page can be accessed at `localhost:8080`, any file changes under `ui` dir, will be reflected by refresh the browser(cache-disabled), no need to restart the web service.
 
-## Build & Deploy guide:
-
-todo
 
 ## Maintenance guide:
 

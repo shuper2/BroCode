@@ -3,6 +3,7 @@ package com.epam.hackathon.data;
 import com.epam.hackathon.domain.LostImage;
 import org.mongodb.morphia.Datastore;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,7 +14,7 @@ public class ImageRepositoryImpl implements ImageRepository {
     private Datastore datastore;
 
     @Autowired
-    public ImageRepositoryImpl(Datastore datastore) {
+    public ImageRepositoryImpl(@Qualifier("dataSource") Datastore datastore) {
         this.datastore = datastore;
     }
 

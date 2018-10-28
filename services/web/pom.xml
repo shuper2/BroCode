@@ -51,6 +51,11 @@
 		<artifactId>spring-boot-maven-plugin</artifactId>
 	  </plugin>
 	</plugins>
+	<resources>
+	  <resource>
+		<directory>${project.basedir}/../../ui</directory>
+	  </resource>
+	</resources>
   </build>
 
 </project>

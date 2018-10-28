@@ -1,19 +1,14 @@
 package com.epam.hackathon.web;
 
-import com.epam.hackathon.data.ImageRepository;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
+import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages="com.epam.hackathon", exclude={MongoAutoConfiguration.class})
 public class FindingWebApplication implements WebMvcConfigurer {
-
-    @Bean
-    ImageRepository findingCaseRepository() {
-        return new ImageRepository(){};
-    }
 
     @Override
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {

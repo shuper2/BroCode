@@ -1,24 +1,35 @@
 package com.epam.hackathon.web.controller;
 
-import com.epam.hackathon.data.ImageRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.epam.hackathon.web.request.ImageType;
+import com.epam.hackathon.web.service.FileService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import java.io.IOException;
 
 @Controller
 class FileUploadController {
-    private final ImageRepository imageRepository;
+    private static final Logger logger = LoggerFactory.getLogger(FileUploadController.class);
 
-    @Autowired
-    public FileUploadController(final ImageRepository imageRepository) {
-        this.imageRepository = imageRepository;
+    private final FileService fileService;
+
+    FileUploadController(final FileService fileService) {
+        this.fileService = fileService;
     }
 
-    @RequestMapping("/upload")
-    public Long uploadImageFile(@RequestBody MultipartFile file){
-        return 1L;
+    @PostMapping("/upload")
+    public String uploadImageFile(@RequestPart MultipartFile file,
+                                  @RequestParam("image-type") ImageType imageType,
+                                  RedirectAttributes redirectAttributes) throws IOException {
+        logger.info("File uploaded: {} with type:{}", file.getOriginalFilename(), imageType);
+        String filename = fileService.save(file, imageType);
+        redirectAttributes.addAttribute("message", "File uploaded.");
+        redirectAttributes.addAttribute("filename", filename);
+        return "redirect:/found.html";
     }
 
 }

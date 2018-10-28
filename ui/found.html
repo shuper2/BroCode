@@ -24,8 +24,12 @@
           <form action="/upload" method="post" enctype="multipart/form-data">
             <div class="form-row">
               <div class="custom-file col-9">
-                <input type="file" class="custom-file-input" id="imageFile" onchange="loadPic(this)" accept="image/*" required>
+                <input type="file" name="file" class="custom-file-input" id="imageFile" onchange="loadPic(this)" accept="image/*" required>
                 <label class="custom-file-label" for="imageFile">Choose file...</label>
+                <input type="radio" id="image-type-lost" name="image-type" value="LOST" checked>
+                <label for="image-type-lost">Lost</label>
+                <input type="radio" id="image-type-found" name="image-type" value="FOUND">
+                <label for="image-type-found">Found</label>
               </div>
               <div class="col"></div>
               <button type="submit" class="col btn btn-primary">Upload</button>

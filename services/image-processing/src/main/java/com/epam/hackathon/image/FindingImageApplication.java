@@ -9,10 +9,10 @@ import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
-@SpringBootApplication
-//@EnableScheduling
+@SpringBootApplication(scanBasePackages = "com.epam.hackathon", exclude={MongoAutoConfiguration.class})
 public class FindingImageApplication {
 
 

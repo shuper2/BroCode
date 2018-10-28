@@ -1,7 +1,7 @@
 package com.epam.hackathon.data;
 
-import com.epam.hachathon.domain.FoundImage;
-import com.epam.hachathon.domain.LostImage;
+import com.epam.hackathon.domain.FoundImage;
+import com.epam.hackathon.domain.LostImage;
 import com.epam.hackathon.config.MongoDBConfig;
 import junit.framework.TestCase;
 import org.junit.Test;

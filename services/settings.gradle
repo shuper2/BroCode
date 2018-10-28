@@ -8,5 +8,5 @@
  */
 
 rootProject.name = 'finding-service-bundle'
-include 'core', 'web', 'data', 'image-processing'
+include 'web', 'data', 'image-processing'
 

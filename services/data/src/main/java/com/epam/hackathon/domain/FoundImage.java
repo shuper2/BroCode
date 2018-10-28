@@ -1,4 +1,4 @@
-package com.epam.hachathon.domain;
+package com.epam.hackathon.domain;
 
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;

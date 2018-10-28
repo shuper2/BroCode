@@ -1,6 +1,6 @@
 package com.epam.hackathon.data;
 
-import com.epam.hachathon.domain.LostImage;
+import com.epam.hackathon.domain.LostImage;
 import com.epam.hackathon.config.MongoDBConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
